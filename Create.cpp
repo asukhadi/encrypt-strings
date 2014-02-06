@@ -23,23 +23,23 @@ int main()
 void createEncryptString(char *szPlaintext, char *szCiphertext, unsigned int iLen, unsigned long *ulKey, unsigned long *ulMove)
 {
 	// Generating random key + move
-    *ulKey = getRandom(100, 2000);
-    *ulMove = getRandom(1000000, 2000000000);
+	*ulKey = getRandom(100, 2000);
+	*ulMove = getRandom(1000000, 2000000000);
 
 	// We need to save the key to a different variable, because it changes for each loop iteration
 	int key = *ulKey;
 
 	// Encryption = Decryption
-    for(int i = 0; i < iLen; i++)
-    {
-        szCiphertext[i] = (char)(szPlaintext[i] ^ key);
-        key += key ^ (iLen ^ i);
-    }
+	for(int i = 0; i < iLen; i++)
+	{
+		szCiphertext[i] = (char)(szPlaintext[i] ^ key);
+		key += key ^ (iLen ^ i);
+	}
 }
 
 int getRandom(int start, int end)
 {
-    return rand() % end + start;
+	return rand() % end + start;
 }
 
 char* toHex(char* buffer, int len)
