@@ -6,7 +6,7 @@ Example
 ===============
 ```
 String: asukhadi
-CEncryptString(("\x59\x1B\xBC\xE7\x7B\x53\x15\x99" + 0xF5326), 8, 0x438, 0xF5326).String()
+EncryptString(("\x59\x1B\xBC\xE7\x7B\x53\x15\x99" + 0xF5326), 0xF5326, 8, 0x438).String()
 ```
 
 How to encrypt the strings

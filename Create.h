@@ -6,7 +6,7 @@
 #include <time.h>
 #include <iostream>
 #include <string>
-#include "CEncryptString.h"
+#include "EncryptString.h"
 
 using namespace std;
 

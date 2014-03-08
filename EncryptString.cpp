@@ -1,11 +1,11 @@
-#include "CEncryptString.h"
+#include "EncryptString.h"
 
-const char *CEncryptString::String() 
+const char *EncryptString::String( ) 
 { 
     return szPlaintext;
 }
 
-CEncryptString::CEncryptString(char * szCiphertext, unsigned int iLen, unsigned long ulKey, unsigned long ulMove)
+EncryptString::EncryptString( char * szCiphertext, unsigned long ulMove, unsigned int iLen, unsigned long ulKey )
 {
     szPlaintext = new char[iLen + 1];
 
@@ -18,7 +18,7 @@ CEncryptString::CEncryptString(char * szCiphertext, unsigned int iLen, unsigned 
     szPlaintext[iLen] = '\0';
 }
 
-CEncryptString::~CEncryptString( void )
+EncryptString::~EncryptString( )
 {
     delete[] szPlaintext;
 }
