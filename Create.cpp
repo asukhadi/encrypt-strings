@@ -5,12 +5,12 @@ int main()
 	// Set seed here -> A time seed is not recommended for repeated uses of rand()
 	srand(time(0));
 
-	unsigned int iLen = 13;
+	unsigned int iLen = 8;
 	unsigned long ulKey = 0, ulMove = 0;
 	char* cipher = new char[iLen];
 
 	// Creating the ciphertext from plaintext and retrieving the key + move
-	createEncryptString("EncryptString", cipher, iLen, &ulKey, &ulMove);
+	createEncryptString("asukhadi", cipher, iLen, &ulKey, &ulMove);
 	
 	// Testing the ciphertext and outputting the call
 	printf("String: %s\n", CEncryptString((cipher + ulMove), iLen, ulKey, ulMove).String());
